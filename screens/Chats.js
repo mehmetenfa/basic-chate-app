@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Text, SafeAreaView } from "react-native";
 
 const Chats = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>Hi, Chats Screen!</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

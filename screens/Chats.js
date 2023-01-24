@@ -1,12 +1,28 @@
 import React from "react";
-import { Text, SafeAreaView } from "react-native";
+import { Text, SafeAreaView, TouchableOpacity, StyleSheet } from "react-native";
 
 const Chats = () => {
   return (
     <SafeAreaView>
-      <Text>Hi, Chats Screen!</Text>
+      <TouchableOpacity style={styles.row}>
+        <Text style={styles.name}>User Name</Text>
+        <Text style={styles.subtitle}>Hi, I am waiting for you for dinner</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  row:{
+    paddingHorizontal: 16,
+    paddingVertical: 20
+  },
+  name: {
+    fontSize: 16,
+  },
+  subtitle: {
+    
+  }
+})
 
 export default Chats;

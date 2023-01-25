@@ -1,6 +1,7 @@
 import React from "react";
 import { View, SafeAreaView, StyleSheet } from "react-native";
 import ContactRow from "../components/ContactRow";
+import Separator from "../components/Separator";
 
 const Chats = () => {
   return (
@@ -12,7 +13,7 @@ const Chats = () => {
           alert('Hi, Yaman KATBY Touched')
         }}
       />
-      <View style={styles.serprator} />
+      <Separator />
       <ContactRow 
         name="Mehmet Enfa" 
         subtitle="Lorem ipsum"
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   serprator: {
     height: StyleSheet.hairlineWidth, 
     backgroundColor: "#E2E2E2",
-    marginStart: 16,
+    marginStart: 88,
   },
 });
 

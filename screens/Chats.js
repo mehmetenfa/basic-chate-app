@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, SafeAreaView, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const Chats = () => {
@@ -13,7 +13,7 @@ const Chats = () => {
           </Text>
         </View>
 
-        <Ionicons size={20} name="chevron-forward-outline" />
+        <Ionicons size={20} style={styles.icon} name="chevron-forward-outline" />
       </TouchableOpacity>
 
       <View style={styles.serprator} />
@@ -48,8 +48,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textsContainer: {
-    flex: 1,
-    
+    flex: 1, 
+    marginTop: 25   
+  },
+  icon: {
+    marginTop: 20
   },  
   name: {
     fontSize: 16,

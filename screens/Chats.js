@@ -4,15 +4,24 @@ import ContactRow from "../components/ContactRow";
 
 const Chats = () => {
   return (
-    <SafeAreaView>
-      <ContactRow />
-
+    <SafeAreaView style={styles.marginTop}>
+      <ContactRow 
+        name="Yaman KATBY" 
+        subtitle="React Native Couse" 
+      />
       <View style={styles.serprator} />
+      <ContactRow 
+        name="User Name" 
+        subtitle="Lorem ipsum"
+      />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  marginTop: {
+    marginTop: 25,
+  },
   serprator: {
     height: StyleSheet.hairlineWidth,
     backgroundColor: "#E2E2E2",

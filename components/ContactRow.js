@@ -2,9 +2,9 @@ import React from "react";
 import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const ContactRow = ({ name, subtitle }) => {
+const ContactRow = ({ name, subtitle, onPress }) => {
   return (
-    <TouchableOpacity style={styles.row}>
+    <TouchableOpacity style={styles.row} onPress={onPress}>
       <View style={styles.avatar}>
         <Text style={styles.avatarLabel}>
           {name

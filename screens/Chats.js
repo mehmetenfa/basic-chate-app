@@ -8,11 +8,17 @@ const Chats = () => {
       <ContactRow 
         name="Yaman KATBY" 
         subtitle="React Native Couse" 
+        onPress={() => {
+          alert('Hi, Yaman KATBY Touched')
+        }}
       />
       <View style={styles.serprator} />
       <ContactRow 
-        name="User Name" 
+        name="Mehmet Enfa" 
         subtitle="Lorem ipsum"
+        onPress={() => {
+          alert('Hi, Yaman Mehmet Enfa Touched')
+        }}
       />
     </SafeAreaView>
   );
@@ -20,10 +26,10 @@ const Chats = () => {
 
 const styles = StyleSheet.create({
   marginTop: {
-    marginTop: 25,
+    marginTop: 35,
   },
   serprator: {
-    height: StyleSheet.hairlineWidth,
+    height: StyleSheet.hairlineWidth, 
     backgroundColor: "#E2E2E2",
     marginStart: 16,
   },

@@ -1,41 +1,21 @@
 import React from "react";
-import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
+  TextBase,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import ContactRow from "../components/ContactRow";
 
 const Chats = () => {
   return (
     <SafeAreaView>
-      <TouchableOpacity style={styles.row}>
-        <View style={styles.textsContainer}>
-          <Text style={styles.name}>User Name</Text>
-          <Text style={styles.subtitle}>
-            Hi, I am waiting for you for dinner
-          </Text>
-        </View>
-
-        <Ionicons size={20} style={styles.icon} name="chevron-forward-outline" />
-      </TouchableOpacity>
+      <ContactRow />
 
       <View style={styles.serprator} />
-
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.name}>User Name</Text>
-        <Text style={styles.subtitle}>Hi, I am waiting for you for dinner</Text>
-      </TouchableOpacity>
-
-      <View style={styles.serprator} />
-
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.name}>User Name</Text>
-        <Text style={styles.subtitle}>Hi, I am waiting for you for dinner</Text>
-      </TouchableOpacity>
-
-      <View style={styles.serprator} />
-
-      <TouchableOpacity style={styles.row}>
-        <Text style={styles.name}>User Name</Text>
-        <Text style={styles.subtitle}>Hi, I am waiting for you for dinner</Text>
-      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -44,16 +24,25 @@ const styles = StyleSheet.create({
   row: {
     paddingHorizontal: 16,
     paddingVertical: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  avatar: {
+    width: 56,
+    height: 56,
+    backgroundColor: "#2196f3",
+    borderRadius: 28,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  avatarLabel: {
+    fontSize: 20,
+    color: "white",
   },
   textsContainer: {
-    flex: 1, 
-    marginTop: 25   
+    flex: 1,
+    marginStart: 16,
   },
-  icon: {
-    marginTop: 20
-  },  
   name: {
     fontSize: 16,
   },

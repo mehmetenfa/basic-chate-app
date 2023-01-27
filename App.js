@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView, Text, Button } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 
@@ -8,6 +8,7 @@ const Home = ({navigation}) => {
   return (
     <SafeAreaView>
       <Text>Hi Home Screen</Text>
+      <Button title='Go to Settings Screen' />
     </SafeAreaView>
   )
 }

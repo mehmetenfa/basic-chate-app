@@ -8,15 +8,24 @@ const Home = ({navigation}) => {
   return (
     <SafeAreaView>
       <Text>Hi Home Screen</Text>
-      <Button title='Go to Settings Screen' />
+      <Button title='Go to Settings Screen'
+      onPress={() => {
+        navigation.push("Settings")
+      }}
+      />
     </SafeAreaView>
   )
 }
 
-const Settings = () => {
+const Settings = ({navigation}) => {
   return (
     <SafeAreaView>
       <Text>Hi Settings Screen</Text>
+      <Button title='Go to Home Screen'
+      onPress={() => {
+        navigation.push("Home")
+      }}
+      />
     </SafeAreaView>
   )
 }

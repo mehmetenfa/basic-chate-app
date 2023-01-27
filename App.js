@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import {Ionicons} from '@expo/vector-icons'
 
 
-const Home = ({navigation}) => {
+const Home = () => {
   return (
     <SafeAreaView>
       <Text>Hi Home Screen</Text>
@@ -13,7 +13,7 @@ const Home = ({navigation}) => {
   )
 }
 
-const Settings = ({navigation}) => {
+const Settings = () => {
   return (
     <SafeAreaView>
       <Text>Hi Settings Screen</Text>

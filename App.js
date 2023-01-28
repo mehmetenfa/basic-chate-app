@@ -1,54 +1,37 @@
-import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
-import {Ionicons} from '@expo/vector-icons'
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Chats from './screens/Chats'
 
+const ChatsStack = createStackNavigator()
 
-const Home = () => {
+const ChatsScreen = () => {
   return (
-    <SafeAreaView>
-      <Text>Hi Home Screen</Text>
-    </SafeAreaView>
-  )
-}
-
-const Settings = () => {
-  return (
-    <SafeAreaView>
-      <Text>Hi Settings Screen</Text>
-    </SafeAreaView>
+    <ChatsStack.Navigator>
+      <ChatsStack.Screen name="Chats" component={Chats} />
+    </ChatsStack.Navigator>
   )
 }
 
 const Tabs = createBottomTabNavigator()
 
+const TabsScreen = () => (
+  <Tabs.Navigator>
+    <Tabs.Screen name='Chats' component={ChatsScreen} />
+  </Tabs.Navigator>
+)
+
+const MainStack = createStackNavigator()
+
 const App = () => {
   return (
     <NavigationContainer>
-      <Tabs.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          let iconName;
-
-          if (route.name === 'Home') {
-            iconName = focused
-              ? 'chatbubbles'
-              : 'chatbubbles-outline';
-          } else if (route.name === 'Settings') {
-            iconName = focused ? 'settings' : 'settings-outline';
-          }
-
-          // You can return any component that you like here!
-          return <Ionicons name={iconName} size={size} color={color} />;
-        },
-      })}
-      >
-        <Tabs.Screen name='Home' component={Home} />
-        <Tabs.Screen name='Settings' component={Settings} />
-      </Tabs.Navigator>
+      <MainStack.Navigator headerMode='none'>
+        <MainStack.Screen name='Tabs' component={TabsScreen} />
+      </MainStack.Navigator>
     </NavigationContainer>
   )
 }
 
-export default App;
+export default App

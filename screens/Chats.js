@@ -26,9 +26,9 @@ const Chats = () => {
 };
 
 const styles = StyleSheet.create({
-  marginTop: {
-    marginTop: 35,
-  },
+  // marginTop: {
+  //   marginTop: 35,
+  // },
   serprator: {
     height: StyleSheet.hairlineWidth, 
     backgroundColor: "#E2E2E2",

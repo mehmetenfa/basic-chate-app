@@ -14,8 +14,14 @@ const Settings = () => {
         style={styles.contactRow}
       />
       <Separator />
-      <Cell />
-
+      <Cell
+        title="Logout"
+        icon="chevron-forward-outline"
+        tintColor={colors.red}
+        onPress={() => {
+            alert("don't touch me again")
+        }}
+      />
     </View>
   );
 };

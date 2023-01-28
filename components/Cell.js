@@ -4,19 +4,17 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/constants";
 
 
-const Cell = () => {
+const Cell = ({title, icon, tintColor, onPress}) => {
   return (
     <TouchableOpacity
       style={styles.cell}
-      onPress={() => {
-        alert("Hi, You touched me");
-      }}
+      onPress={onPress}
     >
-      <View style={styles.iconsContainer}>
+      <View style={[styles.iconsContainer, {backgroundColor: tintColor}]}>
         <Ionicons name="log-out-outline" size={24} color={"white"} />
       </View>
-      <Text style={styles.title}>Logout</Text>
-      <Ionicons name="chevron-forward-outline" size={20} />
+      <Text style={styles.title}>{title}</Text>
+      <Ionicons name={icon} size={20} />
     </TouchableOpacity>
   );
 };
@@ -39,7 +37,6 @@ const styles = StyleSheet.create({
   iconsContainer: {
     width: 32,
     height: 32,
-    backgroundColor: colors.red,
     borderRadius: 6,
     alignItems: "center",
     justifyContent: "center",

@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Chats from './screens/Chats'
+import Settings from './screens/Settings'
 
 const ChatsStack = createStackNavigator()
 
@@ -14,11 +15,22 @@ const ChatsScreen = () => {
   )
 }
 
+const SettingsStack = createStackNavigator() 
+
+const SettingsScreen = () => {
+  return (
+    <SettingsStack.Navigator>
+      <SettingsStack.Screen name="Settings" component={Settings} />
+    </SettingsStack.Navigator>
+  )
+}
+
 const Tabs = createBottomTabNavigator()
 
 const TabsScreen = () => (
   <Tabs.Navigator>
-    <Tabs.Screen name='Chats' component={ChatsScreen} />
+    <Tabs.Screen name='Chats' component={Chats} />
+    <Tabs.Screen name='Settings' component={Settings} />
   </Tabs.Navigator>
 )
 

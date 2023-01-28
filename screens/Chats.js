@@ -1,11 +1,11 @@
 import React from "react";
-import { View, SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet } from "react-native";
 import ContactRow from "../components/ContactRow";
 import Separator from "../components/Separator";
 
 const Chats = () => {
   return (
-    <SafeAreaView style={styles.marginTop}>
+    <SafeAreaView>
       <ContactRow 
         name="Yaman KATBY" 
         subtitle="React Native Couse" 
@@ -26,9 +26,6 @@ const Chats = () => {
 };
 
 const styles = StyleSheet.create({
-  // marginTop: {
-  //   marginTop: 35,
-  // },
   serprator: {
     height: StyleSheet.hairlineWidth, 
     backgroundColor: "#E2E2E2",

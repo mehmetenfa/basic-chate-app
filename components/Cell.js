@@ -4,17 +4,17 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../config/constants";
 
 
-const Cell = ({title, icon, tintColor, onPress}) => {
+const Cell = ({title, icon, tintColor, style, onPress}) => {
   return (
     <TouchableOpacity
-      style={styles.cell}
+      style={[styles.cell, style]}
       onPress={onPress}
     >
       <View style={[styles.iconsContainer, {backgroundColor: tintColor}]}>
-        <Ionicons name="log-out-outline" size={24} color={"white"} />
+        <Ionicons name={icon} size={24} color={"white"} />
       </View>
       <Text style={styles.title}>{title}</Text>
-      <Ionicons name={icon} size={20} />
+      <Ionicons name="chevron-forward-outline" size={20} />
     </TouchableOpacity>
   );
 };

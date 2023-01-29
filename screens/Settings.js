@@ -16,10 +16,29 @@ const Settings = () => {
       <Separator />
       <Cell
         title="Logout"
-        icon="chevron-forward-outline"
+        icon="log-out-outline"
         tintColor={colors.red}
         onPress={() => {
-            alert("don't touch me again")
+          alert("don't touch me again");
+        }}
+      />
+
+      <Cell
+        title="Help"
+        icon="information-outline"
+        tintColor={colors.green}
+        onPress={() => {
+          alert("don't touch me again");
+        }}
+        style={{marginTop: 20}}
+      />
+      
+      <Cell
+        title="Tell a Friend"
+        icon="heart-outline"
+        tintColor={colors.pink}
+        onPress={() => {
+          alert("don't touch me again");
         }}
       />
     </View>

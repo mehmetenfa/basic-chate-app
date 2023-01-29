@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView, StyleSheet } from "react-native";
 import ContactRow from "../components/ContactRow";
 import Separator from "../components/Separator";
 
-const Chats = () => {
+const Chats = ({ navigation }) => {
+
+  useEffect(() => {
+    
+    const isLoggedIn = false
+    if(!isLoggedIn) {
+      navigation.navigate("SignUp")
+    }
+      
+      }, [])
+  
+
   return (
     <SafeAreaView>
       <ContactRow 

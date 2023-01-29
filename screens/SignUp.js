@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { colors } from "../config/constants";
+import Button from "../components/Button";
 
 const SignUp = () => {
   return (
@@ -20,20 +21,16 @@ const SignUp = () => {
           <TextInput style={styles.input} placeholder="Enter your password" />
 
           <View style={styles.buttonsContainer}>
-            <TouchableOpacity style={styles.buttonContainer}>
-              <Text style={styles.buttonLabel}>Sign In</Text>
-            </TouchableOpacity>
+            <Button title="Sign In" />
 
-            <TouchableOpacity style={styles.buttonContainer}>
-              <Text style={styles.buttonLabel}>Sign Up</Text>
-            </TouchableOpacity>
+            <Button title="Sign Up"  />
           </View>
         </View>
       </SafeAreaView>
     </View>
   );
 };
-
+ 
 const styles = StyleSheet.create({
   //   margintop: {
   //     marginTop: 35,
@@ -65,16 +62,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 32,
   },
-  buttonContainer: {
-    backgroundColor: "black",
-    paddingHorizontal:  16,
-    paddingVertical: 12,
-    borderRadius: 6,
-  },
-  buttonLabel: {
-    color: "white",
-    fontSize: 18,
-  },
+  
 });
 
 export default SignUp;

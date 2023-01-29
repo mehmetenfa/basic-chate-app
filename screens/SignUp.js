@@ -21,15 +21,15 @@ const SignUp = () => {
           <TextInput style={styles.input} placeholder="Enter your password" />
 
           <View style={styles.buttonsContainer}>
-            <Button title="Sign In" />
+            <Button title="Sign In" varient="secondary" />
 
-            <Button title="Sign Up"  />
+            <Button title="Sign Up" varient="primary" />
           </View>
         </View>
       </SafeAreaView>
     </View>
   );
-};
+}; 
  
 const styles = StyleSheet.create({
   //   margintop: {
